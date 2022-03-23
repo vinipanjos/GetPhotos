@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="selected_image_txt">Selected image from user</string>
+    <string name="image_select">Select image from user</string>
+    <string name="select_image_new">Select image from user (new)</string>
+</resources>
