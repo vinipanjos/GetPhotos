@@ -3,4 +3,5 @@
     <string name="selected_image_txt">Selected image from user</string>
     <string name="image_select">Select image from user</string>
     <string name="select_image_new">Select image from user (new)</string>
+    <string name="take_picture">Take a picture</string>
 </resources>

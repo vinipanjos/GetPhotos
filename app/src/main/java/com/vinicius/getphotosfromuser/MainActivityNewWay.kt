@@ -4,6 +4,7 @@ import android.Manifest
 import android.app.Activity
 import android.content.Intent
 import android.content.pm.PackageManager
+import android.net.Uri
 import android.os.Bundle
 import android.provider.MediaStore
 import android.widget.Toast
@@ -15,6 +16,11 @@ import androidx.core.content.ContextCompat
 import com.vinicius.getphotosfromuser.databinding.ActivityMainNewWayBinding
 
 class MainActivityNewWay : AppCompatActivity() {
+
+    companion object{
+        private const val PERMISSION_CODE = 1
+    }
+
     //viewBinding
     private lateinit var binding: ActivityMainNewWayBinding
 
@@ -27,6 +33,7 @@ class MainActivityNewWay : AppCompatActivity() {
     ) { result: ActivityResult ->
         if (result.resultCode == Activity.RESULT_OK) {
             binding.ivImage.setImageURI(result.data?.data)
+            val image: Uri? = result.data?.data
         }
     }
 
@@ -86,9 +93,7 @@ class MainActivityNewWay : AppCompatActivity() {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)
     }
 
-    companion object{
-        private const val PERMISSION_CODE = 1
-    }
+
 
 }
 
